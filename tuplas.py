@@ -37,4 +37,107 @@ def a02():
 
 
 
+def a03():
+    from random import randint
 
+    while True:
+        opc = str(input('N for play :')).strip().upper()[0]
+        if opc == 'N':
+            nuns = (randint(1,10),randint(1,10),randint(1,10),randint(1,10),randint(1,10),randint(1,10),)
+            print(f'Os números sorteados foram {nuns}')
+            maior = m = nuns[0]
+            while True: #verifica qual é o maior
+                if nuns[1] > maior :
+                    maior = nuns[1]
+
+                if nuns[2] > maior:
+                    maior = nuns[2]
+                if nuns[3] > maior:
+                    maior = nuns[3]
+
+                if nuns[4] > maior:
+                    maior = nuns[4]
+
+                break
+
+            while True:
+                if nuns[1] < m :
+                    m = nuns[1] 
+
+                if nuns[2] < m:
+                    m = nuns[2]
+                if nuns[3] < m:
+                    m = nuns[3]
+
+                if nuns[4] < m:
+                    m = nuns[4]
+                break
+            print(f'O maior foi o {maior} e o menor foi {m}')
+        else:
+            break
+
+
+
+
+
+def a03v2():
+    from random import randint
+
+    while True:
+        opc = str(input('N for play :')).strip().upper()[0]
+        if opc == 'N':
+            nuns = (randint(1,10),randint(1,10),randint(1,10),randint(1,10),randint(1,10),randint(1,10),)
+            print(f'Os números sorteados foram {nuns}')
+            maior = m = nuns[0]
+            print(f'O maior é {max(nuns)} \nE o menor é {min(nuns)}')
+
+
+        else:
+            break
+
+
+
+
+def a004():
+    num =   (int(input('Digite um número: ')),
+            int(input('Digite outro: ')),
+            int(input('Mais um: ')),
+            int(input('O ultimo : ')))
+    print(num)
+    print(f'O valor 9 apareceu {num.count(9)} vezes')
+    if 3 in num:
+        print(f'O valor 3 apareceu no indice {num.index(3)}')
+    par = imp = 0
+    for n in num:
+        if n % 2 == 0:
+            par += 1
+        else:
+            imp += 1
+
+    print(f'Dos valores {par} são PAR e {imp} são IMPARES ')
+
+
+
+
+
+def a0012():
+    lista = ('Casaco', 66.43,'Camisa', 44 ,'sort', 32)
+
+    for c in range(1,len(lista)):
+        if c % 2 == 0 :
+            print(f'{lista[c]:.<15}',end='')
+        else: 
+            print(f'R${lista[c]:>}')
+
+
+palavras = ('Casaco','box','Treiler','carro','dinheiro')
+
+
+for p in range(1,len(palavras)):
+    l = ''
+    for l in palavras[p]:
+        if l.lower() in 'aeiou':
+            nl += l
+
+
+    print(f'As letras miniscula da palavra {palavras[p]} são: {l}')
