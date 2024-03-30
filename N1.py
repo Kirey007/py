@@ -178,3 +178,6 @@ def caixa(): #CAIXA ELETRONICO Com bug no saque!
     print('Fechando sistema...')
     sleep(1)
     print(f'OBS: Foi feito {cont} operações na seção anterior do caixa')
+
+
+caixa()
